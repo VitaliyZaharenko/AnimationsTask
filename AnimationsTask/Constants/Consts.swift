@@ -10,4 +10,8 @@ import Foundation
 
 struct Consts {
     
+    struct AnimationCell {
+        static let reuseIdentifier = "AnimationNameId"
+        static let xibName = "AnimationCell"
+    }
 }

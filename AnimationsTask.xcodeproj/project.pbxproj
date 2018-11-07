@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217F921920336002DB7E9 /* AppDelegate.swift */; };
-		F8B217FC21920336002DB7E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217FB21920336002DB7E9 /* ViewController.swift */; };
+		F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217FB21920336002DB7E9 /* AnimationListController.swift */; };
 		F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B217FD21920336002DB7E9 /* Main.storyboard */; };
 		F8B2180121920336002DB7E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B2180021920336002DB7E9 /* Assets.xcassets */; };
 		F8B2180421920336002DB7E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2180221920336002DB7E9 /* LaunchScreen.storyboard */; };
 		F8B2180F21920336002DB7E9 /* AnimationsTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2180E21920336002DB7E9 /* AnimationsTaskTests.swift */; };
 		F8B2181A21920336002DB7E9 /* AnimationsTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2181921920336002DB7E9 /* AnimationsTaskUITests.swift */; };
 		F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2182D2192484E002DB7E9 /* Consts.swift */; };
+		F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183021926529002DB7E9 /* AnimationCell.swift */; };
+		F8B218332192653D002DB7E9 /* AnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B218322192653D002DB7E9 /* AnimationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		F8B217F621920336002DB7E9 /* AnimationsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B217F921920336002DB7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8B217FB21920336002DB7E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8B217FB21920336002DB7E9 /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
 		F8B217FE21920336002DB7E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8B2180021920336002DB7E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B2180321920336002DB7E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		F8B2181921920336002DB7E9 /* AnimationsTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTaskUITests.swift; sourceTree = "<group>"; };
 		F8B2181B21920336002DB7E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8B2182D2192484E002DB7E9 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		F8B2183021926529002DB7E9 /* AnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCell.swift; sourceTree = "<group>"; };
+		F8B218322192653D002DB7E9 /* AnimationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				F8B217F821920336002DB7E9 /* AnimationsTask */,
-				F8B217F921920336002DB7E9 /* AppDelegate.swift */,
 				F8B2180D21920336002DB7E9 /* AnimationsTaskTests */,
 				F8B2181821920336002DB7E9 /* AnimationsTaskUITests */,
 				F8B217F721920336002DB7E9 /* Products */,
@@ -106,6 +109,7 @@
 				F8B2182A219247D0002DB7E9 /* Storyboards */,
 				F8B2182C2192481E002DB7E9 /* Extensions */,
 				F8B2182B219247F4002DB7E9 /* Other */,
+				F8B2180521920336002DB7E9 /* Info.plist */,
 			);
 			path = AnimationsTask;
 			sourceTree = "<group>";
@@ -131,7 +135,7 @@
 		F8B218272192479E002DB7E9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F8B217FB21920336002DB7E9 /* ViewController.swift */,
+				F8B217FB21920336002DB7E9 /* AnimationListController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,8 +168,8 @@
 		F8B2182B219247F4002DB7E9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F8B217F921920336002DB7E9 /* AppDelegate.swift */,
 				F8B2180021920336002DB7E9 /* Assets.xcassets */,
-				F8B2180521920336002DB7E9 /* Info.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -180,6 +184,8 @@
 		F8B2182F21924864002DB7E9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F8B2183021926529002DB7E9 /* AnimationCell.swift */,
+				F8B218322192653D002DB7E9 /* AnimationCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 			files = (
 				F8B2180421920336002DB7E9 /* LaunchScreen.storyboard in Resources */,
 				F8B2180121920336002DB7E9 /* Assets.xcassets in Resources */,
+				F8B218332192653D002DB7E9 /* AnimationCell.xib in Resources */,
 				F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,8 +325,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B217FC21920336002DB7E9 /* ViewController.swift in Sources */,
+				F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
+				F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */,
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
