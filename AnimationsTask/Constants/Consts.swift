@@ -14,4 +14,9 @@ struct Consts {
         static let reuseIdentifier = "AnimationNameId"
         static let xibName = "AnimationCell"
     }
+    
+    struct FallAnimationController {
+        static let storyboardName = "Main"
+        static let storyboardId = "FallAnimationControllerId"
+    }
 }

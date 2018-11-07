@@ -17,6 +17,9 @@
 		F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2182D2192484E002DB7E9 /* Consts.swift */; };
 		F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183021926529002DB7E9 /* AnimationCell.swift */; };
 		F8B218332192653D002DB7E9 /* AnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B218322192653D002DB7E9 /* AnimationCell.xib */; };
+		F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B21834219322FB002DB7E9 /* FallAnimationController.swift */; };
+		F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183721932403002DB7E9 /* AnimationItem.swift */; };
+		F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		F8B2182D2192484E002DB7E9 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		F8B2183021926529002DB7E9 /* AnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCell.swift; sourceTree = "<group>"; };
 		F8B218322192653D002DB7E9 /* AnimationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCell.xib; sourceTree = "<group>"; };
+		F8B21834219322FB002DB7E9 /* FallAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallAnimationController.swift; sourceTree = "<group>"; };
+		F8B2183721932403002DB7E9 /* AnimationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationItem.swift; sourceTree = "<group>"; };
+		F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 				F8B21828219247AB002DB7E9 /* Views */,
 				F8B2182A219247D0002DB7E9 /* Storyboards */,
 				F8B2182C2192481E002DB7E9 /* Extensions */,
+				F8B21836219323E4002DB7E9 /* Enums */,
 				F8B2182B219247F4002DB7E9 /* Other */,
 				F8B2180521920336002DB7E9 /* Info.plist */,
 			);
@@ -136,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B217FB21920336002DB7E9 /* AnimationListController.swift */,
+				F8B21834219322FB002DB7E9 /* FallAnimationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 		F8B2182C2192481E002DB7E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +197,14 @@
 				F8B218322192653D002DB7E9 /* AnimationCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F8B21836219323E4002DB7E9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2183721932403002DB7E9 /* AnimationItem.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,8 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */,
+				F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
+				F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */,
 				F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */,
+				F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */,
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
