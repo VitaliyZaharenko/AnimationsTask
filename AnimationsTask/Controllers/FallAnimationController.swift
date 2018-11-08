@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Const {
+fileprivate struct Const {
     static let buttonAnimationDuration = 1.0
     static let labelAnimationDuration = 0.2
 }

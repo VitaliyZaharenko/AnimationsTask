@@ -16,7 +16,12 @@ struct Consts {
     }
     
     struct FallAnimationController {
-        static let storyboardName = "Main"
+        static let storyboardName = "Fall"
         static let storyboardId = "FallAnimationControllerId"
+    }
+    
+    struct ScaleAnimationController {
+        static let storyboardName = "Scale"
+        static let storyboardId = "ScaleControllerId"
     }
 }

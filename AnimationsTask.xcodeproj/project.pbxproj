@@ -20,6 +20,9 @@
 		F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B21834219322FB002DB7E9 /* FallAnimationController.swift */; };
 		F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183721932403002DB7E9 /* AnimationItem.swift */; };
 		F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */; };
+		F8B2183E21938AFC002DB7E9 /* ScalelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183D21938AFC002DB7E9 /* ScalelController.swift */; };
+		F8B2184021938B12002DB7E9 /* Fall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2183F21938B12002DB7E9 /* Fall.storyboard */; };
+		F8B2184221938B8F002DB7E9 /* Scale.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2184121938B8F002DB7E9 /* Scale.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		F8B21834219322FB002DB7E9 /* FallAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallAnimationController.swift; sourceTree = "<group>"; };
 		F8B2183721932403002DB7E9 /* AnimationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationItem.swift; sourceTree = "<group>"; };
 		F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		F8B2183D21938AFC002DB7E9 /* ScalelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalelController.swift; sourceTree = "<group>"; };
+		F8B2183F21938B12002DB7E9 /* Fall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fall.storyboard; sourceTree = "<group>"; };
+		F8B2184121938B8F002DB7E9 /* Scale.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scale.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 				F8B21829219247B5002DB7E9 /* Constants */,
 				F8B218272192479E002DB7E9 /* Controllers */,
 				F8B21828219247AB002DB7E9 /* Views */,
+				F8B2184321942E12002DB7E9 /* Models */,
 				F8B2182A219247D0002DB7E9 /* Storyboards */,
 				F8B2182C2192481E002DB7E9 /* Extensions */,
 				F8B21836219323E4002DB7E9 /* Enums */,
@@ -144,6 +151,7 @@
 			children = (
 				F8B217FB21920336002DB7E9 /* AnimationListController.swift */,
 				F8B21834219322FB002DB7E9 /* FallAnimationController.swift */,
+				F8B2183D21938AFC002DB7E9 /* ScalelController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +177,8 @@
 			children = (
 				F8B217FD21920336002DB7E9 /* Main.storyboard */,
 				F8B2180221920336002DB7E9 /* LaunchScreen.storyboard */,
+				F8B2183F21938B12002DB7E9 /* Fall.storyboard */,
+				F8B2184121938B8F002DB7E9 /* Scale.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -202,9 +212,16 @@
 		F8B21836219323E4002DB7E9 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				F8B2183721932403002DB7E9 /* AnimationItem.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		F8B2184321942E12002DB7E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2183721932403002DB7E9 /* AnimationItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +331,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B2184221938B8F002DB7E9 /* Scale.storyboard in Resources */,
 				F8B2180421920336002DB7E9 /* LaunchScreen.storyboard in Resources */,
+				F8B2184021938B12002DB7E9 /* Fall.storyboard in Resources */,
 				F8B2180121920336002DB7E9 /* Assets.xcassets in Resources */,
 				F8B218332192653D002DB7E9 /* AnimationCell.xib in Resources */,
 				F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */,
@@ -349,6 +368,7 @@
 				F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */,
 				F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */,
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
+				F8B2183E21938AFC002DB7E9 /* ScalelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

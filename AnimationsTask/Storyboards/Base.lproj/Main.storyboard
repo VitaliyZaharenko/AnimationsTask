@@ -41,49 +41,6 @@
             </objects>
             <point key="canvasLocation" x="248.80000000000001" y="117.39130434782609"/>
         </scene>
-        <!--Fall Animation Controller-->
-        <scene sceneID="qP8-vc-Led">
-            <objects>
-                <viewController storyboardIdentifier="FallAnimationControllerId" id="G8t-RX-j7h" customClass="FallAnimationController" customModule="AnimationsTask" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9uD-7X-a4h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall Animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfB-DD-gWp">
-                                <rect key="frame" x="109" y="259.5" width="157" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-Qp-2PU">
-                                <rect key="frame" x="98" y="311" width="179" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Start Animation"/>
-                                <connections>
-                                    <action selector="startAnimation:" destination="G8t-RX-j7h" eventType="touchUpInside" id="eKU-V7-CpG"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gIG-Qp-2PU" firstAttribute="centerX" secondItem="9uD-7X-a4h" secondAttribute="centerX" id="YC3-dI-MqG"/>
-                            <constraint firstItem="gIG-Qp-2PU" firstAttribute="centerY" secondItem="9uD-7X-a4h" secondAttribute="centerY" id="gPh-KH-HY1"/>
-                            <constraint firstItem="gIG-Qp-2PU" firstAttribute="top" secondItem="VfB-DD-gWp" secondAttribute="bottom" constant="20" id="qSA-0U-Xo2"/>
-                            <constraint firstItem="VfB-DD-gWp" firstAttribute="centerX" secondItem="9uD-7X-a4h" secondAttribute="centerX" id="snT-KQ-8p4"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="5va-jF-nXm"/>
-                    </view>
-                    <connections>
-                        <outlet property="button" destination="gIG-Qp-2PU" id="gAd-Rh-8Yy"/>
-                        <outlet property="buttonVerticalCenterConstraint" destination="gPh-KH-HY1" id="WHq-7K-TPX"/>
-                        <outlet property="labelBottomConstraint" destination="qSA-0U-Xo2" id="lHd-Yn-gof"/>
-                        <outlet property="textLabel" destination="VfB-DD-gWp" id="LaT-dk-vYh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L2E-Kx-fiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1039" y="-359"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="LnM-N8-5lf">
             <objects>

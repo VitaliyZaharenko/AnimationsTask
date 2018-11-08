@@ -50,6 +50,9 @@ private extension AnimationListController {
         case .fallAnimation:
             cell.animationNameLabel.text = item.name
             return cell
+        case .scaleAnimation:
+            cell.animationNameLabel.text = item.name
+            return cell
         }
     }
     
@@ -58,6 +61,9 @@ private extension AnimationListController {
         case .fallAnimation:
             let storyboard = UIStoryboard(name: Consts.FallAnimationController.storyboardName, bundle: nil)
             return storyboard.instantiateViewController(withIdentifier: Consts.FallAnimationController.storyboardId)
+        case .scaleAnimation:
+            let storyboard = UIStoryboard(name: Consts.ScaleAnimationController.storyboardName, bundle: nil)
+            return storyboard.instantiateViewController(withIdentifier: Consts.ScaleAnimationController.storyboardId)
         }
     }
     
