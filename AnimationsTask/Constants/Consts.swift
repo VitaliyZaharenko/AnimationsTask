@@ -20,6 +20,11 @@ struct Consts {
             static let reuseIdentifier = "AnimItemWithSliderId"
             static let xibName = "AnimItemWithSliderCell"
         }
+        
+        struct AnimItemWithValue {
+            static let reuseIdentifier = "AnimItemWithValueId"
+            static let xibName = "AnimItemWithValueCell"
+        }
     }
     
     
@@ -37,5 +42,10 @@ struct Consts {
     struct UnhookAnimationController {
         static let storyboardName = "Unhook"
         static let storyboardId = "UnhookControllerId"
+    }
+    
+    struct GravityAnimationController {
+        static let storyboardName = "Gravity"
+        static let storyboardId = "GravityControllerId"
     }
 }

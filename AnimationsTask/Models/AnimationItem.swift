@@ -13,6 +13,7 @@ enum AnimationItem {
     case fallAnimation
     case scaleAnimation(Float)
     case unhookAnimation
+    case gravityAnimation
     
     var name: String {
         switch self {
@@ -22,10 +23,12 @@ enum AnimationItem {
             return "Scale Animation"
         case .unhookAnimation:
             return "Unhook Animation"
+        case .gravityAnimation:
+            return "Gravity Animation"
         }
     }
     
     static var all: [AnimationItem] {
-        return [.fallAnimation, .scaleAnimation(2), .unhookAnimation]
+        return [.fallAnimation, .scaleAnimation(2), .unhookAnimation, .gravityAnimation]
     }
 }

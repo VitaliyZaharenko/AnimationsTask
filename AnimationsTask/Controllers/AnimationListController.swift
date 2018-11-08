@@ -38,13 +38,15 @@ private extension AnimationListController {
         tableView.register(nib1, forCellReuseIdentifier: Consts.Cells.AnimationCell.reuseIdentifier)
         let nib2 = UINib(nibName: Consts.Cells.AnimItemWithSlider.xibName, bundle: Bundle.main)
         tableView.register(nib2, forCellReuseIdentifier: Consts.Cells.AnimItemWithSlider.reuseIdentifier)
+        let nib3 = UINib(nibName: Consts.Cells.AnimItemWithValue.xibName, bundle: Bundle.main)
+        tableView.register(nib3, forCellReuseIdentifier: Consts.Cells.AnimItemWithValue.reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
     }
     
     func animationItem(for indexPath: IndexPath) -> AnimationItem {
-        return animationItems![indexPath.row]
+        return animationItems[indexPath.row]
     }
     
     
@@ -61,6 +63,9 @@ private extension AnimationListController {
         case .unhookAnimation:
             let storyboard = UIStoryboard(name: Consts.UnhookAnimationController.storyboardName, bundle: nil)
             return storyboard.instantiateViewController(withIdentifier: Consts.UnhookAnimationController.storyboardId)
+        case .gravityAnimation:
+            let storyboard = UIStoryboard(name: Consts.GravityAnimationController.storyboardName, bundle: nil)
+            return storyboard.instantiateViewController(withIdentifier: Consts.GravityAnimationController.storyboardId)
         }
     }
     
@@ -87,6 +92,8 @@ extension AnimationListController: UITableViewDelegate {
             return 44
         case .scaleAnimation(_):
             return 66
+        case .gravityAnimation:
+            return 44
         }
     }
 }
@@ -115,6 +122,9 @@ extension AnimationListController: UITableViewDataSource {
         case .scaleAnimation(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.AnimItemWithSlider.reuseIdentifier) as! AnimItemWithSliderCell
             return configureCell(cell, with: item)
+        case .gravityAnimation:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.AnimItemWithValue.reuseIdentifier) as! AnimItemWithValueCell
+            return configureCell(cell, with: item)
         }
     }
 }
@@ -124,9 +134,7 @@ extension AnimationListController: UITableViewDataSource {
 extension AnimationListController {
     func configureCell(_ cell: AnimationCell, with item: AnimationItem) -> UITableViewCell {
         switch item {
-        case .fallAnimation:
-            cell.animationNameLabel.text = item.name
-        case .unhookAnimation:
+        case .fallAnimation, .unhookAnimation, .gravityAnimation:
             cell.animationNameLabel.text = item.name
         default:
             fatalError("Wrong item type for cell")
@@ -141,6 +149,19 @@ extension AnimationListController {
             cell.scaleFactorSlider.value = scale
             cell.scaleFactorLabel.text = String(scale)
             cell.delegate = self
+        default:
+            fatalError("Wrong item type for cell")
+        }
+        return cell
+    }
+    
+    func configureCell(_ cell: AnimItemWithValueCell, with item: AnimationItem) -> UITableViewCell {
+        switch item {
+        case .gravityAnimation:
+            cell.name.text = item.name
+//            cell.scaleFactorSlider.value = scale
+//            cell.scaleFactorLabel.text = String(scale)
+//            cell.delegate = self
         default:
             fatalError("Wrong item type for cell")
         }
