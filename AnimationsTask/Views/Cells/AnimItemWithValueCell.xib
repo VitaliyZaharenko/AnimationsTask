@@ -20,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zyp-ak-QGO">
-                        <rect key="frame" x="10" y="10" width="321" height="30"/>
+                        <rect key="frame" x="15" y="10" width="311" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqQ-gw-pj8">
-                                <rect key="frame" x="0.0" y="0.0" width="239.5" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="231.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Angle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZy-m1-MjT">
-                                <rect key="frame" x="249.5" y="0.0" width="71.5" height="30"/>
+                                <rect key="frame" x="241.5" y="0.0" width="69.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -41,9 +41,9 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Zyp-ak-QGO" secondAttribute="trailing" constant="10" id="kbZ-z3-xf8"/>
+                    <constraint firstAttribute="trailing" secondItem="Zyp-ak-QGO" secondAttribute="trailing" constant="15" id="kbZ-z3-xf8"/>
                     <constraint firstItem="Zyp-ak-QGO" firstAttribute="centerY" secondItem="xp9-GP-4bg" secondAttribute="centerY" id="rhf-xQ-jdR"/>
-                    <constraint firstItem="Zyp-ak-QGO" firstAttribute="leading" secondItem="xp9-GP-4bg" secondAttribute="leading" constant="10" id="s17-Wk-MhC"/>
+                    <constraint firstItem="Zyp-ak-QGO" firstAttribute="leading" secondItem="xp9-GP-4bg" secondAttribute="leading" constant="15" id="s17-Wk-MhC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

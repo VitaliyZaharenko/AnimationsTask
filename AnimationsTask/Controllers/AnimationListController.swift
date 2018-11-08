@@ -63,9 +63,13 @@ private extension AnimationListController {
         case .unhookAnimation:
             let storyboard = UIStoryboard(name: Consts.UnhookAnimationController.storyboardName, bundle: nil)
             return storyboard.instantiateViewController(withIdentifier: Consts.UnhookAnimationController.storyboardId)
-        case .gravityAnimation:
+        case .gravityAnimation(let angle):
             let storyboard = UIStoryboard(name: Consts.GravityAnimationController.storyboardName, bundle: nil)
-            return storyboard.instantiateViewController(withIdentifier: Consts.GravityAnimationController.storyboardId)
+            let controller = storyboard.instantiateViewController(
+                withIdentifier: Consts.GravityAnimationController.storyboardId
+                ) as! GravityAnimationController
+            controller.angle = angle.rad
+            return controller
         }
     }
     
@@ -93,7 +97,7 @@ extension AnimationListController: UITableViewDelegate {
         case .scaleAnimation(_):
             return 66
         case .gravityAnimation:
-            return 44
+            return 50
         }
     }
 }
@@ -157,11 +161,10 @@ extension AnimationListController {
     
     func configureCell(_ cell: AnimItemWithValueCell, with item: AnimationItem) -> UITableViewCell {
         switch item {
-        case .gravityAnimation:
+        case .gravityAnimation(let angle):
             cell.name.text = item.name
-//            cell.scaleFactorSlider.value = scale
-//            cell.scaleFactorLabel.text = String(scale)
-//            cell.delegate = self
+            cell.angleDeg = angle
+            cell.delegate = self
         default:
             fatalError("Wrong item type for cell")
         }
@@ -176,6 +179,20 @@ extension AnimationListController: ScaleAnimationDelegate {
             switch animationItems[i]{
             case .scaleAnimation(_):
                 animationItems[i] = .scaleAnimation(scale)
+            default:
+                break
+            }
+        }
+    }
+}
+
+//MARK: - GravityAnimationDelegate
+extension AnimationListController: GravityAnimationDelegate {
+    func setAngle(degrees: Int) {
+        for i in 0..<animationItems.count {
+            switch animationItems[i]{
+            case .gravityAnimation(_):
+                animationItems[i] = .gravityAnimation(degrees)
             default:
                 break
             }

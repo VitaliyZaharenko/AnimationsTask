@@ -33,6 +33,7 @@
 		F8B2183E21938AFC002DB7E9 /* ScaleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */; };
 		F8B2184021938B12002DB7E9 /* Fall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2183F21938B12002DB7E9 /* Fall.storyboard */; };
 		F8B2184221938B8F002DB7E9 /* Scale.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2184121938B8F002DB7E9 /* Scale.storyboard */; };
+		F8B932A02194DA9300252CDC /* GravityAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9329F2194DA9300252CDC /* GravityAnimationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAnimationController.swift; sourceTree = "<group>"; };
 		F8B2183F21938B12002DB7E9 /* Fall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fall.storyboard; sourceTree = "<group>"; };
 		F8B2184121938B8F002DB7E9 /* Scale.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scale.storyboard; sourceTree = "<group>"; };
+		F8B9329F2194DA9300252CDC /* GravityAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityAnimationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */,
+				F8B9329F2194DA9300252CDC /* GravityAnimationDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
 				A334673F21947D8800240C56 /* AnimItemWithValueCell.swift in Sources */,
+				F8B932A02194DA9300252CDC /* GravityAnimationDelegate.swift in Sources */,
 				F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */,
 				F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */,
 				F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */,
