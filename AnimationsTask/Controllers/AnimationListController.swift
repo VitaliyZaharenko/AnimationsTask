@@ -55,9 +55,12 @@ private extension AnimationListController {
             return storyboard.instantiateViewController(withIdentifier: Consts.FallAnimationController.storyboardId)
         case .scaleAnimation(let scale):
             let storyboard = UIStoryboard(name: Consts.ScaleAnimationController.storyboardName, bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: Consts.ScaleAnimationController.storyboardId) as! ScaleController
+            let controller = storyboard.instantiateViewController(withIdentifier: Consts.ScaleAnimationController.storyboardId) as! ScaleAnimationController
             controller.scaleFactor = scale
             return controller
+        case .unhookAnimation:
+            let storyboard = UIStoryboard(name: Consts.UnhookAnimationController.storyboardName, bundle: nil)
+            return storyboard.instantiateViewController(withIdentifier: Consts.UnhookAnimationController.storyboardId)
         }
     }
     
@@ -80,7 +83,7 @@ extension AnimationListController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = animationItem(for: indexPath)
         switch item {
-        case .fallAnimation:
+        case .fallAnimation, .unhookAnimation:
             return 44
         case .scaleAnimation(_):
             return 66
@@ -106,7 +109,7 @@ extension AnimationListController: UITableViewDataSource {
         
         let item = animationItem(for: indexPath)
         switch item {
-        case .fallAnimation:
+        case .fallAnimation, .unhookAnimation:
             let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.AnimationCell.reuseIdentifier) as! AnimationCell
             return configureCell(cell, with: item)
         case .scaleAnimation(_):
@@ -122,6 +125,8 @@ extension AnimationListController {
     func configureCell(_ cell: AnimationCell, with item: AnimationItem) -> UITableViewCell {
         switch item {
         case .fallAnimation:
+            cell.animationNameLabel.text = item.name
+        case .unhookAnimation:
             cell.animationNameLabel.text = item.name
         default:
             fatalError("Wrong item type for cell")

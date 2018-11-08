@@ -13,7 +13,7 @@ fileprivate struct Const {
     static let numberOfStages = 4
 }
 
-class ScaleController: UIViewController {
+class ScaleAnimationController: UIViewController {
     
     
     //MARK: - Views
@@ -38,7 +38,13 @@ class ScaleController: UIViewController {
     
     @IBAction func startAnimation(_ sender: UIButton) {
         
-        var currentDelay: Double = 0
+        animate(view: button)
+        animate(view: label, delay: 0.1)
+        
+    }
+    
+    private func animate(view viewToAnimate: UIView, delay: Double = 0){
+        var currentDelay: Double = delay
         
         guard let scaleFactor = scaleFactor else { return }
         
@@ -51,11 +57,9 @@ class ScaleController: UIViewController {
                            delay: currentDelay,
                            options: .curveEaseIn,
                            animations: {
-                            self.label.transform = CGAffineTransform(scaleX: CGFloat(currentScale),
+                        viewToAnimate.transform = CGAffineTransform(scaleX: CGFloat(currentScale),
                                                                      y: CGFloat(currentScale))
                             
-                            self.button.transform = CGAffineTransform(scaleX: CGFloat(currentScale),
-                                                                      y: CGFloat(currentScale))
                             
             }, completion: nil)
             
@@ -65,11 +69,8 @@ class ScaleController: UIViewController {
                            delay: currentDelay,
                            options: .curveEaseIn,
                            animations: {
-                            self.label.transform = CGAffineTransform(scaleX: CGFloat(1),
+                           viewToAnimate.transform = CGAffineTransform(scaleX: CGFloat(1),
                                                                      y: CGFloat(1))
-                            self.button.transform = CGAffineTransform(scaleX: CGFloat(1),
-                                                                      y: CGFloat(1))
-                            
             }, completion: nil)
             
             currentDelay += Const.stageDuration

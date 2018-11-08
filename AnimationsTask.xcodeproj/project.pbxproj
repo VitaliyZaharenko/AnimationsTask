@@ -10,6 +10,8 @@
 		A3681A4221943AC000748217 /* AnimItemWithSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A4121943AC000748217 /* AnimItemWithSliderCell.swift */; };
 		A3681A4421943B1600748217 /* AnimItemWithSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */; };
 		A3681A47219449A000748217 /* ScaleAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */; };
+		A3681A4921944F0B00748217 /* Unhook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3681A4821944F0B00748217 /* Unhook.storyboard */; };
+		A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A4A21944F4600748217 /* UnhookAnimationController.swift */; };
 		F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217F921920336002DB7E9 /* AppDelegate.swift */; };
 		F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217FB21920336002DB7E9 /* AnimationListController.swift */; };
 		F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B217FD21920336002DB7E9 /* Main.storyboard */; };
@@ -23,7 +25,7 @@
 		F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B21834219322FB002DB7E9 /* FallAnimationController.swift */; };
 		F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183721932403002DB7E9 /* AnimationItem.swift */; };
 		F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */; };
-		F8B2183E21938AFC002DB7E9 /* ScalelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183D21938AFC002DB7E9 /* ScalelController.swift */; };
+		F8B2183E21938AFC002DB7E9 /* ScaleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */; };
 		F8B2184021938B12002DB7E9 /* Fall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2183F21938B12002DB7E9 /* Fall.storyboard */; };
 		F8B2184221938B8F002DB7E9 /* Scale.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2184121938B8F002DB7E9 /* Scale.storyboard */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		A3681A4121943AC000748217 /* AnimItemWithSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimItemWithSliderCell.swift; sourceTree = "<group>"; };
 		A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimItemWithSliderCell.xib; sourceTree = "<group>"; };
 		A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAnimationDelegate.swift; sourceTree = "<group>"; };
+		A3681A4821944F0B00748217 /* Unhook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unhook.storyboard; sourceTree = "<group>"; };
+		A3681A4A21944F4600748217 /* UnhookAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhookAnimationController.swift; sourceTree = "<group>"; };
 		F8B217F621920336002DB7E9 /* AnimationsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B217F921920336002DB7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B217FB21920336002DB7E9 /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
@@ -68,7 +72,7 @@
 		F8B21834219322FB002DB7E9 /* FallAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallAnimationController.swift; sourceTree = "<group>"; };
 		F8B2183721932403002DB7E9 /* AnimationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationItem.swift; sourceTree = "<group>"; };
 		F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		F8B2183D21938AFC002DB7E9 /* ScalelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalelController.swift; sourceTree = "<group>"; };
+		F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAnimationController.swift; sourceTree = "<group>"; };
 		F8B2183F21938B12002DB7E9 /* Fall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fall.storyboard; sourceTree = "<group>"; };
 		F8B2184121938B8F002DB7E9 /* Scale.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scale.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +170,8 @@
 			children = (
 				F8B217FB21920336002DB7E9 /* AnimationListController.swift */,
 				F8B21834219322FB002DB7E9 /* FallAnimationController.swift */,
-				F8B2183D21938AFC002DB7E9 /* ScalelController.swift */,
+				F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */,
+				A3681A4A21944F4600748217 /* UnhookAnimationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				F8B2180221920336002DB7E9 /* LaunchScreen.storyboard */,
 				F8B2183F21938B12002DB7E9 /* Fall.storyboard */,
 				F8B2184121938B8F002DB7E9 /* Scale.storyboard */,
+				A3681A4821944F0B00748217 /* Unhook.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				F8B2180121920336002DB7E9 /* Assets.xcassets in Resources */,
 				F8B218332192653D002DB7E9 /* AnimationCell.xib in Resources */,
 				F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */,
+				A3681A4921944F0B00748217 /* Unhook.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,13 +389,14 @@
 				A3681A47219449A000748217 /* ScaleAnimationDelegate.swift in Sources */,
 				F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */,
 				F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */,
+				A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
 				F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */,
 				F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */,
 				F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */,
 				A3681A4221943AC000748217 /* AnimItemWithSliderCell.swift in Sources */,
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
-				F8B2183E21938AFC002DB7E9 /* ScalelController.swift in Sources */,
+				F8B2183E21938AFC002DB7E9 /* ScaleAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

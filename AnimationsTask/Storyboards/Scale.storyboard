@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scale Controller-->
+        <!--Scale Animation Controller-->
         <scene sceneID="rQo-L5-YpU">
             <objects>
-                <viewController storyboardIdentifier="ScaleControllerId" id="GL9-4z-Z3h" customClass="ScaleController" customModule="AnimationsTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScaleControllerId" id="GL9-4z-Z3h" customClass="ScaleAnimationController" customModule="AnimationsTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3c-fn-OPo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

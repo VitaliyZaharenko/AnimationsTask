@@ -33,4 +33,9 @@ struct Consts {
         static let storyboardName = "Scale"
         static let storyboardId = "ScaleControllerId"
     }
+    
+    struct UnhookAnimationController {
+        static let storyboardName = "Unhook"
+        static let storyboardId = "UnhookControllerId"
+    }
 }
