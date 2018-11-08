@@ -9,8 +9,8 @@
 import UIKit
 
 fileprivate struct Const {
-    static let scales = [1.7, 1.5, 1.3]
-    static let durations = [0.1, 0.1, 0.1]
+    static let stageDuration = 0.1
+    static let numberOfStages = 4
 }
 
 class ScaleController: UIViewController {
@@ -20,46 +20,61 @@ class ScaleController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    //MARK: - Properties
+    
+    var scaleFactor: Float?
+    
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if(scaleFactor == nil){
+            scaleFactor = 1.7
+        }
     }
     
     //MARK: - Actions
     
     @IBAction func startAnimation(_ sender: UIButton) {
+        
         var currentDelay: Double = 0
-        for i in 0..<Const.scales.count {
-            UIView.animate(withDuration: Const.durations[i],
+        
+        guard let scaleFactor = scaleFactor else { return }
+        
+        let scaleDelta = abs(scaleFactor - 1) / Float(Const.numberOfStages)
+        var currentScale = scaleFactor
+        
+        for _ in 0..<Const.numberOfStages {
+            
+            UIView.animate(withDuration: Const.stageDuration,
                            delay: currentDelay,
                            options: .curveEaseIn,
                            animations: {
-                self.label.transform = CGAffineTransform(scaleX: CGFloat(Const.scales[i]),
-                                                         y: CGFloat(Const.scales[i]))
+                            self.label.transform = CGAffineTransform(scaleX: CGFloat(currentScale),
+                                                                     y: CGFloat(currentScale))
                             
-                self.button.transform = CGAffineTransform(scaleX: CGFloat(Const.scales[i]),
-                                                          y: CGFloat(Const.scales[i]))
+                            self.button.transform = CGAffineTransform(scaleX: CGFloat(currentScale),
+                                                                      y: CGFloat(currentScale))
                             
             }, completion: nil)
             
-            currentDelay += Const.durations[i]
+            currentDelay += Const.stageDuration
             
-            UIView.animate(withDuration: Const.durations[i],
+            UIView.animate(withDuration: Const.stageDuration,
                            delay: currentDelay,
                            options: .curveEaseIn,
                            animations: {
-                self.label.transform = CGAffineTransform(scaleX: CGFloat(1),
+                            self.label.transform = CGAffineTransform(scaleX: CGFloat(1),
                                                                      y: CGFloat(1))
-                self.button.transform = CGAffineTransform(scaleX: CGFloat(1),
-                                                                     y: CGFloat(1))
+                            self.button.transform = CGAffineTransform(scaleX: CGFloat(1),
+                                                                      y: CGFloat(1))
                             
             }, completion: nil)
-            currentDelay += Const.durations[i]
+            
+            currentDelay += Const.stageDuration
+            currentScale += (scaleFactor < 1.0) ? scaleDelta : -scaleDelta
+            
         }
     }
-    
-
-
 }

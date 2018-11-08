@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3681A4221943AC000748217 /* AnimItemWithSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A4121943AC000748217 /* AnimItemWithSliderCell.swift */; };
+		A3681A4421943B1600748217 /* AnimItemWithSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */; };
+		A3681A47219449A000748217 /* ScaleAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */; };
 		F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217F921920336002DB7E9 /* AppDelegate.swift */; };
 		F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217FB21920336002DB7E9 /* AnimationListController.swift */; };
 		F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B217FD21920336002DB7E9 /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3681A4121943AC000748217 /* AnimItemWithSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimItemWithSliderCell.swift; sourceTree = "<group>"; };
+		A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimItemWithSliderCell.xib; sourceTree = "<group>"; };
+		A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAnimationDelegate.swift; sourceTree = "<group>"; };
 		F8B217F621920336002DB7E9 /* AnimationsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B217F921920336002DB7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B217FB21920336002DB7E9 /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
@@ -92,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3681A452194498000748217 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		F8B217ED21920336002DB7E9 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +134,7 @@
 				F8B21828219247AB002DB7E9 /* Views */,
 				F8B2184321942E12002DB7E9 /* Models */,
 				F8B2182A219247D0002DB7E9 /* Storyboards */,
+				A3681A452194498000748217 /* Protocols */,
 				F8B2182C2192481E002DB7E9 /* Extensions */,
 				F8B21836219323E4002DB7E9 /* Enums */,
 				F8B2182B219247F4002DB7E9 /* Other */,
@@ -205,6 +220,8 @@
 			children = (
 				F8B2183021926529002DB7E9 /* AnimationCell.swift */,
 				F8B218322192653D002DB7E9 /* AnimationCell.xib */,
+				A3681A4121943AC000748217 /* AnimItemWithSliderCell.swift */,
+				A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -332,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B2184221938B8F002DB7E9 /* Scale.storyboard in Resources */,
+				A3681A4421943B1600748217 /* AnimItemWithSliderCell.xib in Resources */,
 				F8B2180421920336002DB7E9 /* LaunchScreen.storyboard in Resources */,
 				F8B2184021938B12002DB7E9 /* Fall.storyboard in Resources */,
 				F8B2180121920336002DB7E9 /* Assets.xcassets in Resources */,
@@ -361,12 +379,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3681A47219449A000748217 /* ScaleAnimationDelegate.swift in Sources */,
 				F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */,
 				F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
 				F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */,
 				F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */,
 				F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */,
+				A3681A4221943AC000748217 /* AnimItemWithSliderCell.swift in Sources */,
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
 				F8B2183E21938AFC002DB7E9 /* ScalelController.swift in Sources */,
 			);

@@ -10,10 +10,19 @@ import Foundation
 
 struct Consts {
     
-    struct AnimationCell {
-        static let reuseIdentifier = "AnimationNameId"
-        static let xibName = "AnimationCell"
+    struct Cells {
+        struct AnimationCell {
+            static let reuseIdentifier = "AnimationNameId"
+            static let xibName = "AnimationCell"
+        }
+        
+        struct AnimItemWithSlider {
+            static let reuseIdentifier = "AnimItemWithSliderId"
+            static let xibName = "AnimItemWithSliderCell"
+        }
     }
+    
+    
     
     struct FallAnimationController {
         static let storyboardName = "Fall"

@@ -11,19 +11,19 @@ import Foundation
 enum AnimationItem {
     
     case fallAnimation
-    case scaleAnimation
+    case scaleAnimation(Float)
     
     var name: String {
         switch self {
         case .fallAnimation:
             return "Fall Animation"
-        case .scaleAnimation:
+        case .scaleAnimation(_):
             return "Scale Animation"
         
         }
     }
     
     static var all: [AnimationItem] {
-        return [.fallAnimation, .scaleAnimation]
+        return [.fallAnimation, .scaleAnimation(2)]
     }
 }

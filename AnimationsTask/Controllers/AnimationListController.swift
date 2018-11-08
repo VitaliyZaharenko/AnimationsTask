@@ -17,7 +17,7 @@ class AnimationListController: UIViewController {
     
     //MARK: - Properties
     
-    private var animationItems: [AnimationItem]?
+    private var animationItems: [AnimationItem]!
     
     
     //MARK: - Lifecycle
@@ -34,8 +34,10 @@ class AnimationListController: UIViewController {
 private extension AnimationListController {
     
     func configureTableView(){
-        let nib = UINib(nibName: Consts.AnimationCell.xibName, bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: Consts.AnimationCell.reuseIdentifier)
+        let nib1 = UINib(nibName: Consts.Cells.AnimationCell.xibName, bundle: Bundle.main)
+        tableView.register(nib1, forCellReuseIdentifier: Consts.Cells.AnimationCell.reuseIdentifier)
+        let nib2 = UINib(nibName: Consts.Cells.AnimItemWithSlider.xibName, bundle: Bundle.main)
+        tableView.register(nib2, forCellReuseIdentifier: Consts.Cells.AnimItemWithSlider.reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
@@ -45,25 +47,17 @@ private extension AnimationListController {
         return animationItems![indexPath.row]
     }
     
-    func configureCell(_ cell: AnimationCell, with item: AnimationItem) -> UITableViewCell {
-        switch item {
-        case .fallAnimation:
-            cell.animationNameLabel.text = item.name
-            return cell
-        case .scaleAnimation:
-            cell.animationNameLabel.text = item.name
-            return cell
-        }
-    }
     
     func controllerFor(item: AnimationItem) -> UIViewController {
         switch item {
         case .fallAnimation:
             let storyboard = UIStoryboard(name: Consts.FallAnimationController.storyboardName, bundle: nil)
             return storyboard.instantiateViewController(withIdentifier: Consts.FallAnimationController.storyboardId)
-        case .scaleAnimation:
+        case .scaleAnimation(let scale):
             let storyboard = UIStoryboard(name: Consts.ScaleAnimationController.storyboardName, bundle: nil)
-            return storyboard.instantiateViewController(withIdentifier: Consts.ScaleAnimationController.storyboardId)
+            let controller = storyboard.instantiateViewController(withIdentifier: Consts.ScaleAnimationController.storyboardId) as! ScaleController
+            controller.scaleFactor = scale
+            return controller
         }
     }
     
@@ -82,6 +76,16 @@ extension AnimationListController: UITableViewDelegate {
         let item = animationItem(for: indexPath)
         show(item: item)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item = animationItem(for: indexPath)
+        switch item {
+        case .fallAnimation:
+            return 44
+        case .scaleAnimation(_):
+            return 66
+        }
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -99,8 +103,57 @@ extension AnimationListController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Consts.AnimationCell.reuseIdentifier) as! AnimationCell
+        
         let item = animationItem(for: indexPath)
-        return configureCell(cell, with: item)
+        switch item {
+        case .fallAnimation:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.AnimationCell.reuseIdentifier) as! AnimationCell
+            return configureCell(cell, with: item)
+        case .scaleAnimation(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.AnimItemWithSlider.reuseIdentifier) as! AnimItemWithSliderCell
+            return configureCell(cell, with: item)
+        }
     }
 }
+
+
+//MARK: - Cell configuration
+extension AnimationListController {
+    func configureCell(_ cell: AnimationCell, with item: AnimationItem) -> UITableViewCell {
+        switch item {
+        case .fallAnimation:
+            cell.animationNameLabel.text = item.name
+        default:
+            fatalError("Wrong item type for cell")
+        }
+        return cell
+    }
+    
+    func configureCell(_ cell: AnimItemWithSliderCell, with item: AnimationItem) -> UITableViewCell {
+        switch item {
+        case .scaleAnimation(let scale):
+            cell.name.text = item.name
+            cell.scaleFactorSlider.value = scale
+            cell.scaleFactorLabel.text = String(scale)
+            cell.delegate = self
+        default:
+            fatalError("Wrong item type for cell")
+        }
+        return cell
+    }
+}
+
+//MARK: - ScaleAnimationDelegate
+extension AnimationListController: ScaleAnimationDelegate {
+    func setScale(_ scale: Float) {
+        for i in 0..<animationItems.count {
+            switch animationItems[i]{
+            case .scaleAnimation(_):
+                animationItems[i] = .scaleAnimation(scale)
+            default:
+                break
+            }
+        }
+    }
+}
+
