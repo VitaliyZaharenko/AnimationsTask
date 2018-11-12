@@ -34,6 +34,9 @@
 		F8B2184021938B12002DB7E9 /* Fall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2183F21938B12002DB7E9 /* Fall.storyboard */; };
 		F8B2184221938B8F002DB7E9 /* Scale.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B2184121938B8F002DB7E9 /* Scale.storyboard */; };
 		F8B932A02194DA9300252CDC /* GravityAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9329F2194DA9300252CDC /* GravityAnimationDelegate.swift */; };
+		F8E78AAA219A03A70066FAED /* SnapAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E78AA9219A03A70066FAED /* SnapAnimationController.swift */; };
+		F8E78AAC219A03C20066FAED /* Snap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E78AAB219A03C20066FAED /* Snap.storyboard */; };
+		F8E78AAE219A1A550066FAED /* CGVector+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E78AAD219A1A550066FAED /* CGVector+Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		F8B2183F21938B12002DB7E9 /* Fall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fall.storyboard; sourceTree = "<group>"; };
 		F8B2184121938B8F002DB7E9 /* Scale.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scale.storyboard; sourceTree = "<group>"; };
 		F8B9329F2194DA9300252CDC /* GravityAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityAnimationDelegate.swift; sourceTree = "<group>"; };
+		F8E78AA9219A03A70066FAED /* SnapAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapAnimationController.swift; sourceTree = "<group>"; };
+		F8E78AAB219A03C20066FAED /* Snap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Snap.storyboard; sourceTree = "<group>"; };
+		F8E78AAD219A1A550066FAED /* CGVector+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Operations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,7 @@
 				F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */,
 				A3681A4A21944F4600748217 /* UnhookAnimationController.swift */,
 				A334673A219474D000240C56 /* GravityAnimationController.swift */,
+				F8E78AA9219A03A70066FAED /* SnapAnimationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 				F8B2184121938B8F002DB7E9 /* Scale.storyboard */,
 				A3681A4821944F0B00748217 /* Unhook.storyboard */,
 				A3346738219474A500240C56 /* Gravity.storyboard */,
+				F8E78AAB219A03C20066FAED /* Snap.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 			children = (
 				F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */,
 				A3346740219480ED00240C56 /* Numbers+Degrees.swift */,
+				F8E78AAD219A1A550066FAED /* CGVector+Operations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +390,7 @@
 				F8B218332192653D002DB7E9 /* AnimationCell.xib in Resources */,
 				F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */,
 				A3346739219474A500240C56 /* Gravity.storyboard in Resources */,
+				F8E78AAC219A03C20066FAED /* Snap.storyboard in Resources */,
 				A3681A4921944F0B00748217 /* Unhook.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +418,7 @@
 			files = (
 				A3681A47219449A000748217 /* ScaleAnimationDelegate.swift in Sources */,
 				F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */,
+				F8E78AAE219A1A550066FAED /* CGVector+Operations.swift in Sources */,
 				F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */,
 				A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
@@ -420,6 +431,7 @@
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
 				A334673B219474D000240C56 /* GravityAnimationController.swift in Sources */,
 				A3346741219480ED00240C56 /* Numbers+Degrees.swift in Sources */,
+				F8E78AAA219A03A70066FAED /* SnapAnimationController.swift in Sources */,
 				F8B2183E21938AFC002DB7E9 /* ScaleAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,4 +48,9 @@ struct Consts {
         static let storyboardName = "Gravity"
         static let storyboardId = "GravityControllerId"
     }
+    
+    struct SnapAnimationController {
+        static let storyboardName = "Snap"
+        static let storyboardId = "SnapControllerId"
+    }
 }

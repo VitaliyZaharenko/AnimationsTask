@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Snap Animation Controller-->
+        <scene sceneID="GbK-Pc-rK3">
+            <objects>
+                <viewController storyboardIdentifier="SnapControllerId" id="tqL-Gg-Wyx" customClass="SnapAnimationController" customModule="AnimationsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9vH-rr-md7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap on screen to snap view" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qb-5E-ZtU">
+                                <rect key="frame" x="87" y="503.5" width="200" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SzS-DJ-Gql"/>
+                                    <constraint firstAttribute="width" constant="200" id="VtL-uQ-eIJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8Qb-5E-ZtU" firstAttribute="centerY" secondItem="9vH-rr-md7" secondAttribute="centerY" constant="200" id="Hee-NX-See"/>
+                            <constraint firstItem="8Qb-5E-ZtU" firstAttribute="centerX" secondItem="9vH-rr-md7" secondAttribute="centerX" id="nOC-ld-eSS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JK6-4a-nHs"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="deD-2b-8Zm" appends="YES" id="vUt-YJ-0GA"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="8Qb-5E-ZtU" id="oLj-iE-hYY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbh-XB-Mbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="deD-2b-8Zm">
+                    <connections>
+                        <action selector="tapOccured:" destination="tqL-Gg-Wyx" id="I58-fq-4uM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-466.39999999999998" y="-4.0479760119940034"/>
+        </scene>
+    </scenes>
+</document>

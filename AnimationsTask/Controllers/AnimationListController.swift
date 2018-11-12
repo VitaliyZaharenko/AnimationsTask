@@ -70,6 +70,12 @@ private extension AnimationListController {
                 ) as! GravityAnimationController
             controller.angle = angle.rad
             return controller
+        case .snapAnimation:
+            let storyboard = UIStoryboard(name: Consts.SnapAnimationController.storyboardName, bundle: nil)
+            let controller = storyboard.instantiateViewController(
+                withIdentifier: Consts.SnapAnimationController.storyboardId
+                ) as! SnapAnimationController
+            return controller
         }
     }
     
@@ -92,7 +98,7 @@ extension AnimationListController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = animationItem(for: indexPath)
         switch item {
-        case .fallAnimation, .unhookAnimation:
+        case .fallAnimation, .unhookAnimation, .snapAnimation:
             return 44
         case .scaleAnimation(_):
             return 66
@@ -120,7 +126,7 @@ extension AnimationListController: UITableViewDataSource {
         
         let item = animationItem(for: indexPath)
         switch item {
-        case .fallAnimation, .unhookAnimation:
+        case .fallAnimation, .unhookAnimation, .snapAnimation:
             let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.AnimationCell.reuseIdentifier) as! AnimationCell
             return configureCell(cell, with: item)
         case .scaleAnimation(_):
@@ -138,7 +144,7 @@ extension AnimationListController: UITableViewDataSource {
 extension AnimationListController {
     func configureCell(_ cell: AnimationCell, with item: AnimationItem) -> UITableViewCell {
         switch item {
-        case .fallAnimation, .unhookAnimation, .gravityAnimation:
+        case .fallAnimation, .unhookAnimation, .gravityAnimation, .snapAnimation:
             cell.animationNameLabel.text = item.name
         default:
             fatalError("Wrong item type for cell")
