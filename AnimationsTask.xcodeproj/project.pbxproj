@@ -12,11 +12,16 @@
 		A334673D21947D6600240C56 /* AnimItemWithValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A334673C21947D6600240C56 /* AnimItemWithValueCell.xib */; };
 		A334673F21947D8800240C56 /* AnimItemWithValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334673E21947D8800240C56 /* AnimItemWithValueCell.swift */; };
 		A3346741219480ED00240C56 /* Numbers+Degrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3346740219480ED00240C56 /* Numbers+Degrees.swift */; };
+		A34E635C219AE8DE0058ED4D /* TextAppearAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E635B219AE8DE0058ED4D /* TextAppearAnimationController.swift */; };
+		A34E635E219AE8E50058ED4D /* TextAppear.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34E635D219AE8E50058ED4D /* TextAppear.storyboard */; };
+		A34E6361219AEB6D0058ED4D /* LabelWithTextAppearAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E6360219AEB6D0058ED4D /* LabelWithTextAppearAnimation.swift */; };
 		A3681A4221943AC000748217 /* AnimItemWithSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A4121943AC000748217 /* AnimItemWithSliderCell.swift */; };
 		A3681A4421943B1600748217 /* AnimItemWithSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */; };
 		A3681A47219449A000748217 /* ScaleAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */; };
 		A3681A4921944F0B00748217 /* Unhook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3681A4821944F0B00748217 /* Unhook.storyboard */; };
 		A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A4A21944F4600748217 /* UnhookAnimationController.swift */; };
+		A3B9F106219B04FA00BA45B4 /* UIColor+rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9F105219B04FA00BA45B4 /* UIColor+rgba.swift */; };
+		A3B9F108219B160900BA45B4 /* Numbers+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9F107219B160900BA45B4 /* Numbers+Random.swift */; };
 		F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217F921920336002DB7E9 /* AppDelegate.swift */; };
 		F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217FB21920336002DB7E9 /* AnimationListController.swift */; };
 		F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B217FD21920336002DB7E9 /* Main.storyboard */; };
@@ -62,11 +67,16 @@
 		A334673C21947D6600240C56 /* AnimItemWithValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimItemWithValueCell.xib; sourceTree = "<group>"; };
 		A334673E21947D8800240C56 /* AnimItemWithValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimItemWithValueCell.swift; sourceTree = "<group>"; };
 		A3346740219480ED00240C56 /* Numbers+Degrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Degrees.swift"; sourceTree = "<group>"; };
+		A34E635B219AE8DE0058ED4D /* TextAppearAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAppearAnimationController.swift; sourceTree = "<group>"; };
+		A34E635D219AE8E50058ED4D /* TextAppear.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextAppear.storyboard; sourceTree = "<group>"; };
+		A34E6360219AEB6D0058ED4D /* LabelWithTextAppearAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithTextAppearAnimation.swift; sourceTree = "<group>"; };
 		A3681A4121943AC000748217 /* AnimItemWithSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimItemWithSliderCell.swift; sourceTree = "<group>"; };
 		A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimItemWithSliderCell.xib; sourceTree = "<group>"; };
 		A3681A46219449A000748217 /* ScaleAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAnimationDelegate.swift; sourceTree = "<group>"; };
 		A3681A4821944F0B00748217 /* Unhook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unhook.storyboard; sourceTree = "<group>"; };
 		A3681A4A21944F4600748217 /* UnhookAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhookAnimationController.swift; sourceTree = "<group>"; };
+		A3B9F105219B04FA00BA45B4 /* UIColor+rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+rgba.swift"; sourceTree = "<group>"; };
+		A3B9F107219B160900BA45B4 /* Numbers+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Random.swift"; sourceTree = "<group>"; };
 		F8B217F621920336002DB7E9 /* AnimationsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B217F921920336002DB7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B217FB21920336002DB7E9 /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
@@ -120,6 +130,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A34E635F219AEA5A0058ED4D /* AnimatonControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8B21834219322FB002DB7E9 /* FallAnimationController.swift */,
+				F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */,
+				A3681A4A21944F4600748217 /* UnhookAnimationController.swift */,
+				A334673A219474D000240C56 /* GravityAnimationController.swift */,
+				F8E78AA9219A03A70066FAED /* SnapAnimationController.swift */,
+				A34E635B219AE8DE0058ED4D /* TextAppearAnimationController.swift */,
+			);
+			path = AnimatonControllers;
+			sourceTree = "<group>";
+		};
 		A3681A452194498000748217 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,11 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B217FB21920336002DB7E9 /* AnimationListController.swift */,
-				F8B21834219322FB002DB7E9 /* FallAnimationController.swift */,
-				F8B2183D21938AFC002DB7E9 /* ScaleAnimationController.swift */,
-				A3681A4A21944F4600748217 /* UnhookAnimationController.swift */,
-				A334673A219474D000240C56 /* GravityAnimationController.swift */,
-				F8E78AA9219A03A70066FAED /* SnapAnimationController.swift */,
+				A34E635F219AEA5A0058ED4D /* AnimatonControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B2182F21924864002DB7E9 /* Cells */,
+				A34E6360219AEB6D0058ED4D /* LabelWithTextAppearAnimation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +243,7 @@
 				A3681A4821944F0B00748217 /* Unhook.storyboard */,
 				A3346738219474A500240C56 /* Gravity.storyboard */,
 				F8E78AAB219A03C20066FAED /* Snap.storyboard */,
+				A34E635D219AE8E50058ED4D /* TextAppear.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -242,6 +263,8 @@
 				F8B2183B21932E85002DB7E9 /* UIView+Constraints.swift */,
 				A3346740219480ED00240C56 /* Numbers+Degrees.swift */,
 				F8E78AAD219A1A550066FAED /* CGVector+Operations.swift */,
+				A3B9F105219B04FA00BA45B4 /* UIColor+rgba.swift */,
+				A3B9F107219B160900BA45B4 /* Numbers+Random.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +414,7 @@
 				F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */,
 				A3346739219474A500240C56 /* Gravity.storyboard in Resources */,
 				F8E78AAC219A03C20066FAED /* Snap.storyboard in Resources */,
+				A34E635E219AE8E50058ED4D /* TextAppear.storyboard in Resources */,
 				A3681A4921944F0B00748217 /* Unhook.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +445,7 @@
 				F8E78AAE219A1A550066FAED /* CGVector+Operations.swift in Sources */,
 				F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */,
 				A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */,
+				A3B9F106219B04FA00BA45B4 /* UIColor+rgba.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
 				A334673F21947D8800240C56 /* AnimItemWithValueCell.swift in Sources */,
 				F8B932A02194DA9300252CDC /* GravityAnimationDelegate.swift in Sources */,
@@ -430,8 +455,11 @@
 				A3681A4221943AC000748217 /* AnimItemWithSliderCell.swift in Sources */,
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
 				A334673B219474D000240C56 /* GravityAnimationController.swift in Sources */,
+				A34E6361219AEB6D0058ED4D /* LabelWithTextAppearAnimation.swift in Sources */,
 				A3346741219480ED00240C56 /* Numbers+Degrees.swift in Sources */,
 				F8E78AAA219A03A70066FAED /* SnapAnimationController.swift in Sources */,
+				A34E635C219AE8DE0058ED4D /* TextAppearAnimationController.swift in Sources */,
+				A3B9F108219B160900BA45B4 /* Numbers+Random.swift in Sources */,
 				F8B2183E21938AFC002DB7E9 /* ScaleAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
