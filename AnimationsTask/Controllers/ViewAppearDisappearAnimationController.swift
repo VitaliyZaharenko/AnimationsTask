@@ -18,6 +18,7 @@ class ViewAppearDisappearAnimationController: UIViewController {
     //MARK: - Properties
     
     private var tapGestureRecognizer: UIGestureRecognizer!
+    private var layer: CALayer!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -26,18 +27,29 @@ class ViewAppearDisappearAnimationController: UIViewController {
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         colorView.addGestureRecognizer(tapGestureRecognizer)
         
+        layer = CALayer()
+        layer.backgroundColor = UIColor.red.cgColor
+        let minDimen = layer.frame.size.width > layer.frame.size.height ? layer.frame.size.height : layer.frame.size.width
+        
+        layer.cornerRadius = 30
+        layer.frame = colorView.bounds
+        layer.setAffineTransform(CGAffineTransform(scaleX: 0.1, y: 0.1))
+        colorView.layer.addSublayer(layer)
+        
     }
     
     //MARK: - Callbacks
     
     @objc private func viewTapped(){
         
-        let layer = CALayer()
-        layer.backgroundColor = UIColor.red.cgColor
-        layer.frame = colorView.layer.frame
-        layer.position = colorView.center
-        //layer.position = CGPoint(x: 0.5, y: 0.5)
-        //layer.setAffineTransform(CGAffineTransform(scaleX: 0.1, y: 0.1))
-        colorView.layer.addSublayer(layer)
+        
     }
+    
+    private func animateViaBasicAnimation(){
+        let animation = CABasicAnimation(keyPath: #keyPath(CALayer.transform))
+        animation.fromValue = layer.transform
+        animation.toValue = CATransform3DTranslate(layer.transform, 0, 300, 0)
+        
+    }
+    
 }
