@@ -58,4 +58,9 @@ struct Consts {
         static let storyboardName = "TextAppear"
         static let storyboardId = "TextAppearControllerId"
     }
+    
+    struct ViewAppearDisappearAnimationController {
+        static let storyboardName = "ViewAppearDisappear"
+        static let storyboardId = "ViewAppearDisappearControllerId"
+    }
 }
