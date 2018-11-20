@@ -34,12 +34,14 @@ class AnimationListController: UIViewController {
 private extension AnimationListController {
     
     func configureTableView(){
-        let nib1 = UINib(nibName: Consts.Cells.AnimationCell.xibName, bundle: Bundle.main)
-        tableView.register(nib1, forCellReuseIdentifier: Consts.Cells.AnimationCell.reuseIdentifier)
-        let nib2 = UINib(nibName: Consts.Cells.AnimItemWithSlider.xibName, bundle: Bundle.main)
-        tableView.register(nib2, forCellReuseIdentifier: Consts.Cells.AnimItemWithSlider.reuseIdentifier)
-        let nib3 = UINib(nibName: Consts.Cells.AnimItemWithValue.xibName, bundle: Bundle.main)
-        tableView.register(nib3, forCellReuseIdentifier: Consts.Cells.AnimItemWithValue.reuseIdentifier)
+        let animationCellNib = UINib(nibName: Consts.Cells.AnimationCell.xibName, bundle: Bundle.main)
+        tableView.register(animationCellNib, forCellReuseIdentifier: Consts.Cells.AnimationCell.reuseIdentifier)
+        let animationCellWithSliderNib = UINib(nibName: Consts.Cells.AnimItemWithSlider.xibName, bundle: Bundle.main)
+        tableView.register(animationCellWithSliderNib, forCellReuseIdentifier: Consts.Cells.AnimItemWithSlider.reuseIdentifier)
+        let animationCellWithValueNib = UINib(nibName: Consts.Cells.AnimItemWithValue.xibName, bundle: Bundle.main)
+        tableView.register(animationCellWithValueNib, forCellReuseIdentifier: Consts.Cells.AnimItemWithValue.reuseIdentifier)
+        let gradientAnimationCellNib = UINib(nibName: Consts.Cells.GradientAnimationCell.xibName, bundle: Bundle.main)
+        tableView.register(gradientAnimationCellNib, forCellReuseIdentifier: Consts.Cells.GradientAnimationCell.reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
@@ -82,6 +84,8 @@ private extension AnimationListController {
                 withIdentifier: Consts.TextAppearAnimationController.storyboardId
                 ) as! TextAppearAnimationController
             return controller
+        case .gradientAnimation(_):
+            fatalError("Not Implemented Yet")
         }
     }
     
@@ -110,6 +114,8 @@ extension AnimationListController: UITableViewDelegate {
             return 66
         case .gravityAnimation:
             return 50
+        case .gradientAnimation(_):
+            return 60
         }
     }
 }
@@ -140,6 +146,9 @@ extension AnimationListController: UITableViewDataSource {
             return configureCell(cell, with: item)
         case .gravityAnimation:
             let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.AnimItemWithValue.reuseIdentifier) as! AnimItemWithValueCell
+            return configureCell(cell, with: item)
+        case .gradientAnimation(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: Consts.Cells.GradientAnimationCell.reuseIdentifier) as! GradientAnimationCell
             return configureCell(cell, with: item)
         }
     }
@@ -180,6 +189,10 @@ extension AnimationListController {
         default:
             fatalError("Wrong item type for cell")
         }
+        return cell
+    }
+    
+    func configureCell(_ cell: GradientAnimationCell, with item: AnimationItem) -> UITableViewCell {
         return cell
     }
 }

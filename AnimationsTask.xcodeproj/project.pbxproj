@@ -22,6 +22,12 @@
 		A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3681A4A21944F4600748217 /* UnhookAnimationController.swift */; };
 		A3B9F106219B04FA00BA45B4 /* UIColor+rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9F105219B04FA00BA45B4 /* UIColor+rgba.swift */; };
 		A3B9F108219B160900BA45B4 /* Numbers+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9F107219B160900BA45B4 /* Numbers+Random.swift */; };
+		F807769821A4544C00033973 /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F807769721A4544C00033973 /* ColorCollectionViewCell.xib */; };
+		F807769A21A4546800033973 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F807769921A4546800033973 /* ColorCollectionViewCell.swift */; };
+		F807769C21A4558E00033973 /* AddColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F807769B21A4558E00033973 /* AddColorCollectionViewCell.xib */; };
+		F807769E21A455A200033973 /* AddColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F807769D21A455A200033973 /* AddColorCollectionViewCell.swift */; };
+		F80776A021A456A000033973 /* GradientAnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F807769F21A456A000033973 /* GradientAnimationCell.xib */; };
+		F80776A221A456B900033973 /* GradientAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80776A121A456B900033973 /* GradientAnimationCell.swift */; };
 		F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217F921920336002DB7E9 /* AppDelegate.swift */; };
 		F8B217FC21920336002DB7E9 /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B217FB21920336002DB7E9 /* AnimationListController.swift */; };
 		F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B217FD21920336002DB7E9 /* Main.storyboard */; };
@@ -80,6 +86,12 @@
 		A3681A4A21944F4600748217 /* UnhookAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhookAnimationController.swift; sourceTree = "<group>"; };
 		A3B9F105219B04FA00BA45B4 /* UIColor+rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+rgba.swift"; sourceTree = "<group>"; };
 		A3B9F107219B160900BA45B4 /* Numbers+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Random.swift"; sourceTree = "<group>"; };
+		F807769721A4544C00033973 /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		F807769921A4546800033973 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		F807769B21A4558E00033973 /* AddColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		F807769D21A455A200033973 /* AddColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		F807769F21A456A000033973 /* GradientAnimationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradientAnimationCell.xib; sourceTree = "<group>"; };
+		F80776A121A456B900033973 /* GradientAnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAnimationCell.swift; sourceTree = "<group>"; };
 		F8B217F621920336002DB7E9 /* AnimationsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B217F921920336002DB7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B217FB21920336002DB7E9 /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
@@ -287,6 +299,12 @@
 				A3681A4321943B1600748217 /* AnimItemWithSliderCell.xib */,
 				A334673C21947D6600240C56 /* AnimItemWithValueCell.xib */,
 				A334673E21947D8800240C56 /* AnimItemWithValueCell.swift */,
+				F807769721A4544C00033973 /* ColorCollectionViewCell.xib */,
+				F807769921A4546800033973 /* ColorCollectionViewCell.swift */,
+				F807769B21A4558E00033973 /* AddColorCollectionViewCell.xib */,
+				F807769D21A455A200033973 /* AddColorCollectionViewCell.swift */,
+				F807769F21A456A000033973 /* GradientAnimationCell.xib */,
+				F80776A121A456B900033973 /* GradientAnimationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -419,10 +437,13 @@
 				F8B2184021938B12002DB7E9 /* Fall.storyboard in Resources */,
 				F8B2180121920336002DB7E9 /* Assets.xcassets in Resources */,
 				A334673D21947D6600240C56 /* AnimItemWithValueCell.xib in Resources */,
+				F807769821A4544C00033973 /* ColorCollectionViewCell.xib in Resources */,
 				F8B218332192653D002DB7E9 /* AnimationCell.xib in Resources */,
+				F80776A021A456A000033973 /* GradientAnimationCell.xib in Resources */,
 				F8B217FF21920336002DB7E9 /* Main.storyboard in Resources */,
 				A3346739219474A500240C56 /* Gravity.storyboard in Resources */,
 				F8E78AB6219B61220066FAED /* ViewAppearDisappear.storyboard in Resources */,
+				F807769C21A4558E00033973 /* AddColorCollectionViewCell.xib in Resources */,
 				F8E78AAC219A03C20066FAED /* Snap.storyboard in Resources */,
 				A34E635E219AE8E50058ED4D /* TextAppear.storyboard in Resources */,
 				A3681A4921944F0B00748217 /* Unhook.storyboard in Resources */,
@@ -456,18 +477,21 @@
 				F8E78AAE219A1A550066FAED /* CGVector+Operations.swift in Sources */,
 				F8B2183821932403002DB7E9 /* AnimationItem.swift in Sources */,
 				A3681A4B21944F4600748217 /* UnhookAnimationController.swift in Sources */,
+				F807769A21A4546800033973 /* ColorCollectionViewCell.swift in Sources */,
 				A3B9F106219B04FA00BA45B4 /* UIColor+rgba.swift in Sources */,
 				F8B2182E2192484E002DB7E9 /* Consts.swift in Sources */,
 				A334673F21947D8800240C56 /* AnimItemWithValueCell.swift in Sources */,
 				F8B932A02194DA9300252CDC /* GravityAnimationDelegate.swift in Sources */,
 				F8B2183C21932E85002DB7E9 /* UIView+Constraints.swift in Sources */,
 				F8B2183121926529002DB7E9 /* AnimationCell.swift in Sources */,
+				F807769E21A455A200033973 /* AddColorCollectionViewCell.swift in Sources */,
 				F8B21835219322FB002DB7E9 /* FallAnimationController.swift in Sources */,
 				F8E78AB4219B5E260066FAED /* ViewAppearDisappearAnimationController.swift in Sources */,
 				A3681A4221943AC000748217 /* AnimItemWithSliderCell.swift in Sources */,
 				F8B217FA21920336002DB7E9 /* AppDelegate.swift in Sources */,
 				A334673B219474D000240C56 /* GravityAnimationController.swift in Sources */,
 				A34E6361219AEB6D0058ED4D /* LabelWithTextAppearAnimation.swift in Sources */,
+				F80776A221A456B900033973 /* GradientAnimationCell.swift in Sources */,
 				A3346741219480ED00240C56 /* Numbers+Degrees.swift in Sources */,
 				F8E78AAA219A03A70066FAED /* SnapAnimationController.swift in Sources */,
 				A34E635C219AE8DE0058ED4D /* TextAppearAnimationController.swift in Sources */,

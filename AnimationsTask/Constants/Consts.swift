@@ -25,6 +25,23 @@ struct Consts {
             static let reuseIdentifier = "AnimItemWithValueId"
             static let xibName = "AnimItemWithValueCell"
         }
+        
+        struct GradientAnimationCell {
+            static let reuseIdentifier = "GradientAnimationCellId"
+            static let xibName = "GradientAnimationCell"
+        }
+    }
+    
+    struct CollectionViewCells {
+        struct Color {
+            static let reuseIdentifier = "ColorCollectionViewCellId"
+            static let xibName = "ColorCollectionViewCell"
+        }
+        
+        struct AddColor {
+            static let reuseIdentifier = "AddColorCollectionViewCellId"
+            static let xibName = "AddColorCollectionViewCell"
+        }
     }
     
     

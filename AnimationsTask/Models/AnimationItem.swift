@@ -6,7 +6,7 @@
 //  Copyright © 2018 vitcopr. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum AnimationItem {
     
@@ -16,6 +16,7 @@ enum AnimationItem {
     case gravityAnimation(Int)
     case snapAnimation
     case textAppearAnimation
+    case gradientAnimation([UIColor])
     
     var name: String {
         switch self {
@@ -31,10 +32,17 @@ enum AnimationItem {
             return "Snap Animation"
         case .textAppearAnimation:
             return "Text Appear Animation"
+        case .gradientAnimation(_):
+            return "Gradient Animation"
         }
     }
     
     static var all: [AnimationItem] {
-        return [.fallAnimation, .scaleAnimation(2), .unhookAnimation, AnimationItem.gravityAnimation(45), .snapAnimation, .textAppearAnimation]
+        return [.fallAnimation,
+                .scaleAnimation(2),
+                .unhookAnimation,
+                AnimationItem.gravityAnimation(45),
+                .snapAnimation,
+                .textAppearAnimation, .gradientAnimation([UIColor.blue, UIColor.green, UIColor.yellow])]
     }
 }

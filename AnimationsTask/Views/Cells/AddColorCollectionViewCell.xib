@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddColorCollectionViewCellId" id="VPb-Ti-M3W">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="EKq-VM-0Qu">
+                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EKq-VM-0Qu" secondAttribute="trailing" constant="5" id="GmB-nR-4qn"/>
+                <constraint firstItem="EKq-VM-0Qu" firstAttribute="centerX" secondItem="VPb-Ti-M3W" secondAttribute="centerX" id="Vgt-Hc-Gcq"/>
+                <constraint firstItem="EKq-VM-0Qu" firstAttribute="top" secondItem="VPb-Ti-M3W" secondAttribute="top" constant="5" id="XCT-o7-GmQ"/>
+                <constraint firstItem="EKq-VM-0Qu" firstAttribute="centerY" secondItem="VPb-Ti-M3W" secondAttribute="centerY" id="i5e-px-htF"/>
+                <constraint firstAttribute="bottom" secondItem="EKq-VM-0Qu" secondAttribute="bottom" constant="5" id="iss-Lg-YQ5"/>
+                <constraint firstItem="EKq-VM-0Qu" firstAttribute="leading" secondItem="VPb-Ti-M3W" secondAttribute="leading" constant="5" id="wdy-ah-Cfa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="nkT-Iy-bdY"/>
+            <point key="canvasLocation" x="-158" y="-146"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="add" width="44" height="44"/>
+    </resources>
+</document>
