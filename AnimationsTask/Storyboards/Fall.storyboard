@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fall Animation Controller-->
+        <scene sceneID="o7J-YU-3nI">
+            <objects>
+                <viewController storyboardIdentifier="FallAnimationControllerId" id="4e5-KN-OMa" customClass="FallAnimationController" customModule="AnimationsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fCD-ub-sha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall Animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0F-ub-OHG">
+                                <rect key="frame" x="109" y="259.5" width="157" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwI-3f-ozz">
+                                <rect key="frame" x="98" y="311" width="179" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="startAnimation:" destination="4e5-KN-OMa" eventType="touchUpInside" id="E4F-Ik-x5K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G0F-ub-OHG" firstAttribute="centerX" secondItem="fCD-ub-sha" secondAttribute="centerX" id="7hz-HO-eu0"/>
+                            <constraint firstItem="uwI-3f-ozz" firstAttribute="centerX" secondItem="fCD-ub-sha" secondAttribute="centerX" id="DBW-YT-dN0"/>
+                            <constraint firstItem="uwI-3f-ozz" firstAttribute="top" secondItem="G0F-ub-OHG" secondAttribute="bottom" constant="20" id="KGx-Et-afY"/>
+                            <constraint firstItem="uwI-3f-ozz" firstAttribute="centerY" secondItem="fCD-ub-sha" secondAttribute="centerY" id="z1N-98-hkZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ro4-ea-vkM"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="uwI-3f-ozz" id="pHP-Zv-nRh"/>
+                        <outlet property="buttonVerticalCenterConstraint" destination="z1N-98-hkZ" id="FDM-YT-7Em"/>
+                        <outlet property="labelBottomConstraint" destination="KGx-Et-afY" id="paL-7K-cX8"/>
+                        <outlet property="textLabel" destination="G0F-ub-OHG" id="P65-xF-z8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bv-t3-h0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="-378"/>
+        </scene>
+    </scenes>
+</document>

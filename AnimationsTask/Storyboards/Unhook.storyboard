@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Unhook Animation Controller-->
+        <scene sceneID="Fne-I3-fIf">
+            <objects>
+                <viewController storyboardIdentifier="UnhookControllerId" id="HT2-Xa-l1R" customClass="UnhookAnimationController" customModule="AnimationsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="45V-4K-PKB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unhook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qd-tV-qh9">
+                                <rect key="frame" x="143" y="259.5" width="89" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hly-6y-uji">
+                                <rect key="frame" x="98" y="311" width="179" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="startAnimation:" destination="HT2-Xa-l1R" eventType="touchUpInside" id="41J-Lz-2hN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hly-6y-uji" firstAttribute="top" secondItem="0Qd-tV-qh9" secondAttribute="bottom" constant="20" id="1qV-ir-XZx"/>
+                            <constraint firstItem="0Qd-tV-qh9" firstAttribute="centerX" secondItem="45V-4K-PKB" secondAttribute="centerX" id="2FL-hO-hjA"/>
+                            <constraint firstItem="Hly-6y-uji" firstAttribute="centerY" secondItem="45V-4K-PKB" secondAttribute="centerY" id="Lot-s1-uyh"/>
+                            <constraint firstItem="Hly-6y-uji" firstAttribute="centerX" secondItem="45V-4K-PKB" secondAttribute="centerX" id="kgf-RK-rma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GTY-S1-1Tm"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Hly-6y-uji" id="uM0-kQ-VdL"/>
+                        <outlet property="label" destination="0Qd-tV-qh9" id="5R0-sS-G62"/>
+                        <outlet property="verticalConstraint" destination="Lot-s1-uyh" id="vP2-ym-Myv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucY-XW-JuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="-377"/>
+        </scene>
+    </scenes>
+</document>

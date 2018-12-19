@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scale Animation Controller-->
+        <scene sceneID="rQo-L5-YpU">
+            <objects>
+                <viewController storyboardIdentifier="ScaleControllerId" id="GL9-4z-Z3h" customClass="ScaleAnimationController" customModule="AnimationsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3c-fn-OPo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bae-Il-AGe">
+                                <rect key="frame" x="157" y="259.5" width="62" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNe-l0-eER">
+                                <rect key="frame" x="98" y="311" width="179" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="startAnimation:" destination="GL9-4z-Z3h" eventType="touchUpInside" id="zST-1s-RhE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bae-Il-AGe" firstAttribute="centerX" secondItem="X3c-fn-OPo" secondAttribute="centerX" id="16k-56-moz"/>
+                            <constraint firstItem="PNe-l0-eER" firstAttribute="top" secondItem="bae-Il-AGe" secondAttribute="bottom" constant="20" id="AEc-Mk-dFm"/>
+                            <constraint firstItem="PNe-l0-eER" firstAttribute="centerY" secondItem="X3c-fn-OPo" secondAttribute="centerY" id="YON-PE-PZE"/>
+                            <constraint firstItem="PNe-l0-eER" firstAttribute="centerX" secondItem="X3c-fn-OPo" secondAttribute="centerX" id="qWe-FS-PdY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qon-Ry-dYD"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="PNe-l0-eER" id="j1y-NC-ynw"/>
+                        <outlet property="label" destination="bae-Il-AGe" id="iTx-G7-AdK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54p-XA-Jnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="-378"/>
+        </scene>
+    </scenes>
+</document>
